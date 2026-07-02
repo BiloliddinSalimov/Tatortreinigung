@@ -1,6 +1,5 @@
 import { triage } from "../../../lib/triage";
 import { knowledge } from "../../../lib/knowledge";
-import { FAQS } from "../../../data/content";
 import { COMPANY, PHONE_DISPLAY, EMAIL, LOCATIONS } from "../../../lib/siteConfig";
 
 export const runtime = "nodejs";
@@ -34,8 +33,8 @@ function getIp(req) {
   return req.headers.get("x-real-ip") || "unknown";
 }
 
-// System prompt wird dynamisch gebaut — aus lib/knowledge.js, data/content.js
-// und lib/siteConfig.js. Nur diese Dateien pflegen; die AI antwortet dann
+// System prompt wird dynamisch gebaut — aus lib/knowledge.js und
+// lib/siteConfig.js. Nur diese Dateien pflegen; die AI antwortet dann
 // automatisch mit den neuen Informationen. Kein Neu-Build nötig.
 function buildSystemPrompt() {
   return [
@@ -57,9 +56,16 @@ function buildSystemPrompt() {
     "UNSERE LEISTUNGEN (nur diese anbieten):",
     ...knowledge.leistungen.map((l) => `- ${l}`),
     "",
-    "EINSATZGEBIET:",
-    ...knowledge.einsatzgebiet.map((g) => `- ${g}`),
+    `EINSATZGEBIET: ${knowledge.einsatzgebiet}`,
     "",
+    "ZIELGRUPPEN (für wen wir arbeiten):",
+    ...knowledge.zielgruppen.map((z) => `- ${z}`),
+    "",
+    "SOFORTHILFE-HINWEISE (bei akuten Fällen unbedingt mitgeben):",
+    ...knowledge.soforthilfe.map((h) => `- ${h}`),
+    "",
+    `ABLAUF EINES AUFTRAGS: ${knowledge.ablauf}`,
+    `KONTAKTWEGE: ${knowledge.kontakt}`,
     `VERFÜGBARKEIT: ${knowledge.verfuegbarkeit}`,
     `PREISE: ${knowledge.preise}`,
     `VERSICHERUNG: ${knowledge.versicherung}`,
@@ -78,7 +84,7 @@ function buildSystemPrompt() {
     "- Erfinde niemals Informationen. Wenn du etwas nicht weißt, sage es und verweise auf den telefonischen Kontakt.",
     "",
     "HÄUFIGE FRAGEN (als Wissensbasis nutzen, frei formulieren):",
-    ...FAQS.map((f) => `F: ${f.q}\nA: ${f.a}`),
+    ...knowledge.faq.map((f) => `F: ${f.frage}\nA: ${f.antwort}`),
   ].join("\n");
 }
 
