@@ -63,7 +63,7 @@ export default function ModalShell({
   return (
     <div
       style={{
-        position: "absolute",
+        position: "fixed",
         inset: 0,
         zIndex,
         display: "flex",

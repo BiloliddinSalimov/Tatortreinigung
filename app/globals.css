@@ -28,6 +28,23 @@ body {
   }
 }
 
+/* Cookie banner — full-width sheet on mobile, floating card on desktop. */
+.dc-cookie-banner {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+@media (min-width: 600px) {
+  .dc-cookie-banner {
+    left: 20px;
+    right: auto;
+    bottom: 20px;
+    width: min(420px, calc(100vw - 40px));
+    border-top: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 22px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  }
+}
+
 @keyframes slowzoom { 0% { transform: scale(1.06) translate3d(0,0,0); } 100% { transform: scale(1.18) translate3d(-1.4%, -1.8%, 0); } }
 @keyframes glowpulse { 0% { opacity: 0.35; } 100% { opacity: 0.8; } }
 @keyframes dotpulse { 0% { box-shadow: 0 0 0 0 rgba(63,191,143,0.55); } 70% { box-shadow: 0 0 0 6px rgba(63,191,143,0); } 100% { box-shadow: 0 0 0 0 rgba(63,191,143,0); } }

@@ -6,7 +6,7 @@ import { PlusIcon, MinusIcon } from "../icons";
 import { FAQS } from "../../data/content";
 
 export default function FaqModal({ onClose }) {
-  const [open, setOpen] = useState({});
+  const [openIndex, setOpenIndex] = useState(null);
 
   return (
     <ModalShell
@@ -22,13 +22,13 @@ export default function FaqModal({ onClose }) {
         finden keine Antwort? Rufen Sie uns an.
       </p>
       {FAQS.map((f, i) => {
-        const isOpen = !!open[i];
+        const isOpen = openIndex === i;
         return (
-          <div key={i} style={s("background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:14px; overflow:hidden;")}>
+          <div key={i} style={s("background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:14px;")}>
             <button
               type="button"
               aria-expanded={isOpen}
-              onClick={() => setOpen((o) => ({ ...o, [i]: !o[i] }))}
+              onClick={() => setOpenIndex((cur) => (cur === i ? null : i))}
               style={s("width:100%; text-align:left; border:none; background:transparent; display:flex; justify-content:space-between; align-items:center; gap:13px; padding:16px 16px; cursor:pointer;")}
             >
               <span style={s("font-weight:600; font-size:14.5px; line-height:1.35; color:#fff;")}>

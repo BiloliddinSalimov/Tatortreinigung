@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Source_Serif_4, Public_Sans } from "next/font/google";
 import { SITE_URL, COMPANY, PHONE_DISPLAY, EMAIL, LOCATIONS } from "../lib/siteConfig";
+import CookieConsent from "../components/CookieConsent";
 
 // Self-hosted at build time (no runtime Google Fonts request) — better
 // performance and GDPR-friendly for AT/DE visitors.
@@ -57,6 +58,8 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#050f19",
+  viewportFit: "cover",
+  interactiveWidget: "resizes-content",
 };
 
 function LocalBusinessJsonLd() {
@@ -99,6 +102,7 @@ export default function RootLayout({ children }) {
     <html lang="de" className={`${serif.variable} ${sans.variable}`}>
       <body>
         {children}
+        <CookieConsent />
         <LocalBusinessJsonLd />
       </body>
     </html>

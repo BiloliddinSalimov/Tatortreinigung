@@ -1,6 +1,8 @@
 "use client";
 import { s } from "../../lib/style";
 import ModalShell from "../ModalShell";
+import Footer from "../Footer";
+import ConsentMap from "../ConsentMap";
 import { CheckIcon, handIcons } from "../icons";
 import { eyebrow, sectionH3 } from "../../lib/uiStyles";
 import { ABOUT_SECTIONS, STEPS, HAND_SERVICES } from "../../data/content";
@@ -165,24 +167,8 @@ export default function AboutModal({ onClose }) {
                   "border:1px solid rgba(255,255,255,0.08); border-radius:15px; overflow:hidden; background:rgba(255,255,255,0.04);",
                 )}
               >
-                {/* Echte Karte — Google Maps Embed, kein API-Key nötig. Dunkler
-                    Filter, damit die Karte zum dunklen Glas-Design passt. */}
-                <div style={s("position:relative; height:150px; background:#0a1826;")}>
-                  <iframe
-                    title={`Karte – ${loc.city}`}
-                    src={`https://maps.google.com/maps?q=${query}&z=15&output=embed`}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      border: 0,
-                      display: "block",
-                      filter:
-                        "invert(0.92) hue-rotate(180deg) brightness(0.95) contrast(0.9)",
-                    }}
-                  />
-                </div>
+                {/* DSGVO: Karte lädt erst nach Zustimmung, siehe ConsentMap. */}
+                <ConsentMap query={query} city={loc.city} />
                 <div style={s("padding:15px;")}>
                   <div style={s("font-weight:700; font-size:15px; color:#fff;")}>
                     {loc.city}
@@ -212,6 +198,8 @@ export default function AboutModal({ onClose }) {
           })}
         </div>
       </section>
+
+      <Footer inModal />
     </ModalShell>
   );
 }

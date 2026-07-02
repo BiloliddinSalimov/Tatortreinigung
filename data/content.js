@@ -15,14 +15,14 @@ export const ABOUT_SECTIONS = [
         d: "Reinigung und Instandsetzung von Fundorten nach Todesfällen unter Einhaltung aller Sicherheits- und Hygienevorschriften.",
       },
       {
-        h: "Blut- & Sekretbeseitigung",
-        d: "Tiefenreinigung und keimfreie Beseitigung von Blut, Körperflüssigkeiten und biologischen Rückständen mit Spezialmitteln.",
+        h: "Messiereinigung",
+        d: "Entrümpelung, Grundreinigung und Desinfektion stark vermüllter oder vernachlässigter Wohnungen — diskret und mit Geruchsbeseitigung.",
       },
     ],
   },
   {
     n: "2",
-    title: "Desinfektion & Sanitär",
+    title: "Desinfektion",
     items: [
       {
         h: "Desinfektion & Hygienereinigung",
@@ -81,7 +81,7 @@ export const STEPS = [
     d: "Wir reinigen, desinfizieren und neutralisieren Gerüche – mit Sorgfalt und voller Schutzausrüstung.",
   },
   {
-    check: true,
+    n : "04",
     h: "Sicherer Zustand",
     d: "Wir übergeben Ihnen die Räume wieder sauber, hygienisch und sicher.",
   },
@@ -152,22 +152,74 @@ export const PORTFOLIO = [
 export const FAQS = [
   {
     q: "Wie schnell sind Sie vor Ort?",
-    a: "Im Notfall sind wir rund um die Uhr erreichbar und kommen so schnell wie möglich – in Salzburg, im Umland und in Bayern.",
+    a: "Im Notfall sind wir rund um die Uhr erreichbar und bemühen uns, so schnell wie möglich bei Ihnen vor Ort zu sein. In Salzburg und Umgebung können wir in der Regel innerhalb weniger Stunden reagieren.",
   },
   {
-    q: "Werden die Kosten von der Versicherung übernommen?",
-    a: "In vielen Fällen können die Kosten von Versicherungen getragen werden. Wir beraten Sie und unterstützen Sie gerne bei der Abwicklung.",
+    q: "Welche Leistungen umfasst die Tatortreinigung?",
+    a: "Unsere Leistungen umfassen die fachgerechte Reinigung und Desinfektion nach Todesfällen, Suiziden, Unfällen, Gewaltverbrechen, Leichenfunden, Messie-Wohnungen sowie die Beseitigung biologischer Verunreinigungen und Gerüche.",
   },
   {
     q: "Wird alles diskret behandelt?",
-    a: "Ja. Wir arbeiten vertraulich, respektvoll und ohne unnötiges Aufsehen – Ihre Privatsphäre hat für uns oberste Priorität.",
+    a: "Ja. Diskretion hat für uns höchste Priorität. Unsere Mitarbeiter arbeiten professionell, vertraulich und auf Wunsch mit neutralen Fahrzeugen ohne Firmenbeschriftung.",
+  },
+  {
+    q: "Werden die Kosten von der Versicherung übernommen?",
+    a: "In vielen Fällen übernehmen Versicherungen die Kosten ganz oder teilweise. Gerne beraten wir Sie und unterstützen Sie bei der Kommunikation mit Ihrer Versicherung.",
   },
   {
     q: "Was soll ich tun, bevor Sie eintreffen?",
-    a: "Betreten Sie die betroffenen Räume möglichst nicht und berühren Sie keine Oberflächen. Rufen Sie uns an – wir leiten Sie ruhig durch die nächsten Schritte.",
+    a: "Bitte betreten Sie die betroffenen Räume möglichst nicht und berühren Sie keine Oberflächen. Kontaktieren Sie uns telefonisch – wir informieren Sie über die weiteren Schritte.",
+  },
+  {
+    q: "Sind Tatortreinigungen gesundheitlich gefährlich?",
+    a: "Ja, biologische Verunreinigungen können gesundheitliche Risiken darstellen. Deshalb dürfen Reinigung und Desinfektion nur von geschultem Fachpersonal mit entsprechender Schutzausrüstung durchgeführt werden.",
+  },
+  {
+    q: "Wie läuft eine Tatortreinigung ab?",
+    a: "Nach einer Besichtigung erstellen wir eine Einschätzung des Aufwands. Anschließend führen wir die Reinigung, Desinfektion, Geruchsbeseitigung und fachgerechte Entsorgung aller kontaminierten Materialien durch.",
+  },
+  {
+    q: "Entfernen Sie auch Gerüche?",
+    a: "Ja. Mithilfe professioneller Verfahren und Spezialgeräten beseitigen wir selbst starke Geruchsbelastungen dauerhaft und nachhaltig.",
+  },
+  {
+    q: "Reinigen Sie auch Messie-Wohnungen?",
+    a: "Ja. Wir übernehmen die vollständige Räumung, Reinigung, Desinfektion und Wiederherstellung von Messie-Wohnungen und stark verschmutzten Objekten.",
+  },
+  {
+    q: "Arbeiten Sie auch an Wochenenden und Feiertagen?",
+    a: "Ja. Unser Notdienst ist 24 Stunden täglich, 365 Tage im Jahr für Sie erreichbar – auch an Wochenenden und Feiertagen.",
   },
   {
     q: "In welchem Gebiet sind Sie tätig?",
-    a: "Wir sind in Salzburg, im gesamten Umland sowie in Bayern für Sie im Einsatz.",
+    a: "Wir sind in Salzburg, dem gesamten Salzburger Umland sowie auf Anfrage in Oberösterreich und Bayern für Sie im Einsatz.",
+  },
+  {
+    q: "Muss ich bei der Reinigung anwesend sein?",
+    a: "Nein. Nach Absprache können wir die Arbeiten selbstständig durchführen. Sie müssen während der Reinigung nicht vor Ort sein.",
+  },
+  {
+    q: "Wie lange dauert eine Tatortreinigung?",
+    a: "Die Dauer hängt vom Ausmaß der Verunreinigung ab. Kleinere Einsätze können innerhalb weniger Stunden abgeschlossen werden, umfangreichere Sanierungen benötigen mehrere Tage.",
+  },
+  {
+    q: "Entsorgen Sie kontaminierte Materialien fachgerecht?",
+    a: "Ja. Alle kontaminierten Materialien werden gemäß den gesetzlichen Vorschriften fachgerecht und sicher entsorgt.",
+  },
+  {
+    q: "Erhalte ich ein Angebot vorab?",
+    a: "Ja. Nach einer Besichtigung oder anhand von Fotos erstellen wir Ihnen ein transparentes und unverbindliches Angebot.",
+  },
+  {
+    q: "Können Sie auch Vermieter, Hausverwaltungen und Hotels unterstützen?",
+    a: "Ja. Wir arbeiten regelmäßig für Privatpersonen, Vermieter, Hausverwaltungen, Hotels, Unternehmen sowie öffentliche Einrichtungen.",
+  },
+  {
+    q: "Ist eine Besichtigung kostenpflichtig?",
+    a: "In vielen Fällen bieten wir eine kostenlose Erstberatung und eine unverbindliche Einschätzung an. Kontaktieren Sie uns gerne für weitere Informationen.",
+  },
+  {
+    q: "Kann ich Sie anonym kontaktieren?",
+    a: "Selbstverständlich. Sie können uns jederzeit vertraulich und diskret kontaktieren. Alle Anfragen werden streng vertraulich behandelt.",
   },
 ];

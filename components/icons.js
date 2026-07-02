@@ -27,6 +27,13 @@ export const SparkleIcon = ({ w = 19, stroke = "#7FCDC6" }) => (
   </svg>
 );
 
+export const MapPinIcon = () => (
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7FCDC6" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z" />
+    <circle cx="12" cy="10" r="2.6" />
+  </svg>
+);
+
 export const ShieldIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#BFE0DC" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />

@@ -30,7 +30,7 @@ export default function ChatModal({ messages, sending, draft, setDraft, onSend, 
   }, [messages, sending]);
 
   return (
-    <div style={{ position: "absolute", inset: 0, zIndex: 23, display: "flex", alignItems: "center", justifyContent: "center" }}>
+    <div style={{ position: "fixed", inset: 0, zIndex: 23, display: "flex", alignItems: "center", justifyContent: "center" }}>
       <div
         onClick={onClose}
         style={{
@@ -137,7 +137,7 @@ export default function ChatModal({ messages, sending, draft, setDraft, onSend, 
               }}
               placeholder="Nachricht schreiben…"
               aria-label="Nachricht schreiben"
-              style={s("flex:1; border:none; outline:none; background:transparent; font-family:var(--font-sans),sans-serif; font-size:14px; color:#fff; min-width:0;")}
+              style={s("flex:1; border:none; outline:none; background:transparent; font-family:var(--font-sans),sans-serif; font-size:16px; color:#fff; min-width:0;")}
             />
             <Hover
               as="button"
