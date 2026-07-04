@@ -112,6 +112,12 @@ export const ChevronRightIcon = ({ w = 22 }) => (
   </svg>
 );
 
+export const ChevronDownIcon = ({ w = 22 }) => (
+  <svg width={w} height={w} viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="6 9 12 15 18 9" />
+  </svg>
+);
+
 // Service icons for the "Alles aus einer Hand" section (stroke #7FCDC6).
 export const handIcons = [
   <svg key="i0" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#7FCDC6" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">

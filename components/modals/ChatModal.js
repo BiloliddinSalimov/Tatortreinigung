@@ -47,7 +47,7 @@ export default function ChatModal({ messages, sending, draft, setDraft, onSend, 
         aria-modal="true"
         aria-label="KI-Assistent Chat"
         className="dc-modal-panel"
-        style={s("position:relative; overflow:hidden; display:flex; flex-direction:column; background:linear-gradient(180deg, rgba(20,44,67,0.92) 0%, rgba(8,21,34,0.96) 100%); backdrop-filter:blur(34px) saturate(1.4); -webkit-backdrop-filter:blur(34px) saturate(1.4); color:#fff; animation:modalpop 0.42s cubic-bezier(0.22,1,0.36,1) both;")}
+        style={s("position:relative; overflow:hidden; display:flex; flex-direction:column; background:linear-gradient(180deg, rgba(20,44,67,0.96) 0%, rgba(8,21,34,0.98) 100%); color:#fff; animation:modalpop 0.42s cubic-bezier(0.22,1,0.36,1) both;")}
       >
         <div style={s("flex-shrink:0; padding:16px 18px 14px; border-bottom:1px solid rgba(255,255,255,0.09); display:flex; align-items:center; justify-content:space-between; gap:12px;")}>
           <div style={s("display:flex; align-items:center; gap:11px;")}>

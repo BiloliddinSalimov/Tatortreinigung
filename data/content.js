@@ -114,40 +114,8 @@ export const HAND_SERVICES = [
   },
 ];
 
-// Portfolio, im Instagram-Stil: EIN durchgehendes Karussell. Beim Wischen
-// wechselt oben das Bild und darunter der zugehörige Text. Jeder Eintrag =
-// eine Folie. Neues Bild hinzufügen = Objekt anhängen; Foto in
-// /public/portfolio/ ablegen und den Pfad in `image` setzen.
-export const PORTFOLIO = [
-  {
-    image: "/portfolio/image1.jpg",
-    title: "Tatortreinigung – Privatwohnung",
-    loc: "Salzburg · Wohnbereich, ca. 28 m²",
-    desc: "Vollständige Dekontamination nach behördlicher Freigabe – diskret und ohne sichtbare Spuren.",
-    tags: ["Blutbeseitigung", "Desinfektion"],
-  },
-  {
-    image: "/portfolio/image2.png",
-    title: "Leichenfundort – Wohnhaus",
-    loc: "Salzburg-Umland · Mehrparteienhaus",
-    desc: "Reinigung, Desinfektion und Geruchsbeseitigung nach behördlicher Fundort-Freigabe.",
-    tags: ["Dekontamination", "Geruchsneutralisation"],
-  },
-  {
-    image: "/portfolio/image3.jpg",
-    title: "Tatortreinigung – Wohnzimmer",
-    loc: "Hallein · Erdgeschoss",
-    desc: "Sicherung, Beseitigung biologischer Spuren und gründliche Desinfektion des gesamten Raumes.",
-    tags: ["Blutbeseitigung", "Desinfektion"],
-  },
-  {
-    image: "/portfolio/image4.jpg",
-    title: "Wohnzimmer – nach der Sanierung",
-    loc: "Hallein · Erdgeschoss",
-    desc: "Derselbe Raum nach Abschluss: hygienisch rein, geruchsfrei und wieder sicher nutzbar.",
-    tags: ["Sanierung", "Geruchsneutralisation"],
-  },
-];
+// Das Portfolio lebt jetzt in data/portfolio.js (Reels-Stil, mehrere Bilder
+// pro Projekt) und wird von PortfolioModal direkt importiert.
 
 export const FAQS = [
   {

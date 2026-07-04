@@ -71,7 +71,9 @@ export default function Page() {
                 "position:relative; margin:0 auto; overflow:hidden; font-family:var(--font-sans),system-ui,sans-serif; background:#050f19;",
             )}
         >
-            <BackgroundLayers/>
+            {/* Freeze the ambient video while a modal covers it — a moving
+                backdrop under the modal blur causes scroll stutter. */}
+            <BackgroundLayers paused={aboutOpen || portfolioOpen || faqOpen || chatOpen}/>
 
             {/* centered glass card */}
             <div

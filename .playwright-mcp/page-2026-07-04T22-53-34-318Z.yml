@@ -1,0 +1,53 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e7]: 24/7
+    - generic [ref=e9]:
+      - heading "Tatort-, Leichenfund- & Messie-Reinigung" [level=1] [ref=e10]
+      - paragraph
+    - link "Jetzt anrufen" [ref=e11] [cursor=pointer]:
+      - /url: tel:+436608313103
+      - img [ref=e12]
+      - text: Jetzt anrufen
+    - generic [ref=e14]:
+      - link "WhatsApp Direkt schreiben" [ref=e15] [cursor=pointer]:
+        - /url: https://wa.me/436608313103
+        - img [ref=e17]
+        - generic [ref=e20]:
+          - generic [ref=e21]: WhatsApp
+          - generic [ref=e22]: Direkt schreiben
+      - link "E-Mail Anfrage senden" [ref=e23] [cursor=pointer]:
+        - /url: mailto:office@css-reinigung-salzburg.at
+        - img [ref=e25]
+        - generic [ref=e28]:
+          - generic [ref=e29]: E-Mail
+          - generic [ref=e30]: Anfrage senden
+    - generic [ref=e31]:
+      - img [ref=e32]
+      - textbox "Frage an den KI-Assistenten" [ref=e35]:
+        - /placeholder: Frage an den KI-Assistenten…
+      - button "Frage senden" [ref=e36] [cursor=pointer]:
+        - img [ref=e37]
+    - generic [ref=e39]:
+      - button "Über uns" [ref=e40] [cursor=pointer]:
+        - img [ref=e41]
+        - generic [ref=e44]: Über uns
+      - button "Portfolio" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - generic [ref=e51]: Portfolio
+      - button "FAQ" [ref=e52] [cursor=pointer]:
+        - img [ref=e53]
+        - generic [ref=e57]: FAQ
+  - dialog "Cookie-Einstellungen" [ref=e58]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]: Ihre Privatsphäre ist uns wichtig
+        - paragraph [ref=e62]:
+          - text: Wir verwenden nur technisch notwendige Speichertechnologien. Optionale Statistik- und Marketing-Cookies werden ausschließlich nach Ihrer Einwilligung aktiviert. Details in unserer
+          - link "Datenschutzerklärung" [ref=e63] [cursor=pointer]:
+            - /url: /datenschutz
+          - text: .
+      - generic [ref=e64]:
+        - button "Einstellungen" [ref=e65] [cursor=pointer]
+        - button "Alle ablehnen" [ref=e66] [cursor=pointer]
+        - button "Alle akzeptieren" [ref=e67] [cursor=pointer]
+  - alert [ref=e68]

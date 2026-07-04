@@ -75,7 +75,7 @@ Business contact details live in `lib/siteConfig.js`. Set the public URL for met
 ## Notes on fidelity
 - All inline styles from the prototype are preserved verbatim via the `s()` helper in `lib/style.js`, so the look is identical.
 - Hover states (`style-hover` in the prototype) are handled by the small `<Hover>` wrapper in `page.js`.
-- **Portfolio (Instagram-style):** the Portfolio button opens one continuous swipeable carousel (`PortfolioModal`) — the image on top and the caption below both change per slide, with dots, arrows and a counter. Each slide is an entry in `PORTFOLIO` (`data/content.js`): `{ image, title, loc, desc, tags }`. Drop photos into `public/portfolio/` and point `image` at them; portrait/square photos frame best.
+- **Portfolio (Reels-style):** the Portfolio button opens a vertical snap feed (`PortfolioModal`) — scroll down for the next project, like Instagram Reels. Each project slide has its own horizontal photo carousel (dots, arrows, counter) and a caption overlay with an expandable description. Projects live in `portfolioData` (`data/portfolio.js`): `{ id, name, description, images: [...] }`. Drop photos into `public/portfolio/` and add their URLs to `images`.
 - Contact details (phone `+43 660 8313103`, email, addresses) live in `lib/siteConfig.js` — edit there.
 
 ## Production

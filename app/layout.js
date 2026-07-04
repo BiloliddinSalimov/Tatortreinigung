@@ -1,19 +1,19 @@
 import "./globals.css";
-import { Source_Serif_4, Public_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { SITE_URL, COMPANY, PHONE_DISPLAY, EMAIL, LOCATIONS } from "../lib/siteConfig";
 import CookieConsent from "../components/CookieConsent";
 
-// Self-hosted at build time (no runtime Google Fonts request) — better
-// performance and GDPR-friendly for AT/DE visitors.
-const serif = Source_Serif_4({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+// Variable fonts committed to the repo — no network fetch at build/dev time,
+// and GDPR-friendly for AT/DE visitors (no Google request at runtime either).
+const serif = localFont({
+  src: "./fonts/SourceSerif4-latin.woff2",
+  weight: "300 600",
   variable: "--font-serif",
   display: "swap",
 });
-const sans = Public_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+const sans = localFont({
+  src: "./fonts/PublicSans-latin.woff2",
+  weight: "400 700",
   variable: "--font-sans",
   display: "swap",
 });

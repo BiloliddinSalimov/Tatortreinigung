@@ -1,0 +1,38 @@
+- generic [ref=e6]:
+  - generic [ref=e8]: 24/7
+  - generic [ref=e10]:
+    - heading "Tatort-, Leichenfund- & Messie-Reinigung" [level=1] [ref=e11]
+    - paragraph
+  - link "Jetzt anrufen" [ref=e12] [cursor=pointer]:
+    - /url: tel:+436608313103
+    - img [ref=e13]
+    - text: Jetzt anrufen
+  - generic [ref=e15]:
+    - link "WhatsApp Direkt schreiben" [ref=e16] [cursor=pointer]:
+      - /url: https://wa.me/436608313103
+      - img [ref=e18]
+      - generic [ref=e21]:
+        - generic [ref=e22]: WhatsApp
+        - generic [ref=e23]: Direkt schreiben
+    - link "E-Mail Anfrage senden" [ref=e24] [cursor=pointer]:
+      - /url: mailto:office@css-reinigung-salzburg.at
+      - img [ref=e26]
+      - generic [ref=e29]:
+        - generic [ref=e30]: E-Mail
+        - generic [ref=e31]: Anfrage senden
+  - generic [ref=e32]:
+    - img [ref=e33]
+    - textbox "Frage an den KI-Assistenten" [ref=e36]:
+      - /placeholder: Frage an den KI-Assistenten…
+    - button "Frage senden" [ref=e37] [cursor=pointer]:
+      - img [ref=e38]
+  - generic [ref=e40]:
+    - button "Über uns" [ref=e41] [cursor=pointer]:
+      - img [ref=e42]
+      - generic [ref=e45]: Über uns
+    - button "Portfolio" [ref=e46] [cursor=pointer]:
+      - img [ref=e47]
+      - generic [ref=e52]: Portfolio
+    - button "FAQ" [ref=e53] [cursor=pointer]:
+      - img [ref=e54]
+      - generic [ref=e58]: FAQ
