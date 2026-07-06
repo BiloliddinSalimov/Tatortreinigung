@@ -1,7 +1,14 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import { SITE_URL, COMPANY, PHONE_DISPLAY, EMAIL, LOCATIONS } from "../lib/siteConfig";
+import {
+  SITE_URL,
+  COMPANY,
+  PHONE_DISPLAY,
+  EMAIL,
+  LOCATIONS,
+} from "../lib/siteConfig";
 import CookieConsent from "../components/CookieConsent";
+import { Analytics } from "@vercel/analytics/next";
 
 // Variable fonts committed to the repo — no network fetch at build/dev time,
 // and GDPR-friendly for AT/DE visitors (no Google request at runtime either).
@@ -21,7 +28,8 @@ const sans = localFont({
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Tatortreinigung Salzburg & Bayern – Diskret. Schnell. Professionell.",
+    default:
+      "Tatortreinigung Salzburg & Bayern – Diskret. Schnell. Professionell.",
     template: "%s | Tatortreinigung Salzburg",
   },
   description: COMPANY.description,
@@ -41,9 +49,12 @@ export const metadata = {
     locale: "de_AT",
     url: SITE_URL,
     siteName: COMPANY.name,
-    title: "Tatortreinigung Salzburg & Bayern – Diskret. Schnell. Professionell.",
+    title:
+      "Tatortreinigung Salzburg & Bayern – Diskret. Schnell. Professionell.",
     description: COMPANY.description,
-    images: [{ url: "/mond-hero.jpg", width: 1200, height: 630, alt: COMPANY.name }],
+    images: [
+      { url: "/mond-hero.jpg", width: 1200, height: 630, alt: COMPANY.name },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -84,7 +95,15 @@ function LocalBusinessJsonLd() {
     })),
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+      ],
       opens: "08:00",
       closes: "20:00",
     },
@@ -102,6 +121,7 @@ export default function RootLayout({ children }) {
     <html lang="de" className={`${serif.variable} ${sans.variable}`}>
       <body>
         {children}
+        <Analytics />
         <CookieConsent />
         <LocalBusinessJsonLd />
       </body>
